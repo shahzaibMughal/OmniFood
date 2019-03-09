@@ -5,12 +5,12 @@
   color: #555;
   font-size: 20px; }
 
-.food_delivery > h2, .how_it_works_container > h2 {
+.food_delivery > h2, .how_it_works_container > h2, .our_cites_section > h2, .customer_reviews > h2, .offers_section > h2, .contact_form_section > h2 {
   word-spacing: 0.1em;
   font-size: 2em;
   text-align: center;
   padding: 48px 0; }
-  .food_delivery > h2:after, .how_it_works_container > h2:after {
+  .food_delivery > h2:after, .how_it_works_container > h2:after, .our_cites_section > h2:after, .customer_reviews > h2:after, .offers_section > h2:after, .contact_form_section > h2:after {
     display: block;
     width: 20%;
     margin: 24px auto;
@@ -18,7 +18,7 @@
     height: 2px;
     background: #e67e22; }
   @media (max-width: 500px) {
-    .food_delivery > h2, .how_it_works_container > h2 {
+    .food_delivery > h2, .how_it_works_container > h2, .our_cites_section > h2, .customer_reviews > h2, .offers_section > h2, .contact_form_section > h2 {
       font-size: 1.2em; } }
 
 .btn {
@@ -185,6 +185,8 @@
   @media (min-width: 1200px) {
     .food_delivery .cards {
       display: flex;
+      max-width: 1600px;
+      margin: 0 auto;
       justify-content: space-around;
       margin-bottom: 48px; }
     .food_delivery .card {
@@ -278,5 +280,239 @@
   @media (min-width: 601px) {
     .how_it_works_container .works_steps {
       padding: 48px; } }
+
+.our_cites_section {
+  padding-bottom: 48px; }
+  .our_cites_section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin-bottom: 48px; }
+  .our_cites_section .card {
+    flex: 0 0 100%;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-sizing: border-box;
+    margin-top: 16px; }
+    .our_cites_section .card img {
+      width: 100%;
+      font-size: 350%;
+      margin: 2px; }
+    .our_cites_section .card h3 {
+      font-size: 1.1em;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center; }
+    .our_cites_section .card:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .our_cites_section .detail_container {
+    margin: 16px 16px; }
+    .our_cites_section .detail_container .detail {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      .our_cites_section .detail_container .detail a {
+        color: #e67e22;
+        text-decoration: none; }
+      .our_cites_section .detail_container .detail .icon {
+        fill: #e67e22;
+        width: 24px;
+        height: 24px;
+        padding-right: 8px; }
+  @media (min-width: 680px) {
+    .our_cites_section .card {
+      flex: 0 0 47%; } }
+  @media (min-width: 1200px) {
+    .our_cites_section .card {
+      flex: 0 0 24%; }
+    .our_cites_section .cards {
+      max-width: 1600px;
+      margin: 0 auto; } }
+
+.customer_reviews {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../images/back_customers.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff; }
+  .customer_reviews > h2 {
+    color: #fff; }
+  .customer_reviews .reviews_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 48px; }
+  .customer_reviews .review {
+    padding: 0 24px;
+    text-align: justify;
+    flex: 0 0 300px;
+    font-style: italic; }
+    .customer_reviews .review p, .customer_reviews .review span {
+      color: #fff; }
+    .customer_reviews .review p::before {
+      content: ",,";
+      display: block;
+      font-size: 2em;
+      line-height: 1.1;
+      font-style: italic; }
+    .customer_reviews .review .user {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 24px; }
+      .customer_reviews .review .user .user_img {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        margin-right: 10px; }
+  @media (max-width: 400px) {
+    .customer_reviews p {
+      font-size: 0.8em;
+      margin: 0 24px; }
+    .customer_reviews .user_img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-left: 20px; } }
+
+.offers_section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/back_customers.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background: #f6f6f6;
+  padding-bottom: 48px; }
+  .offers_section .offers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 0 24px; }
+    .offers_section .offers .card {
+      flex: 0 0 100%;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      padding: 20px;
+      margin-top: 16px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .offers_section .offers .card h3 {
+        text-align: left;
+        font-size: 1.1em;
+        font-weight: 400; }
+      .offers_section .offers .card:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+    .offers_section .offers .price {
+      color: #e67e22; }
+      .offers_section .offers .price span {
+        color: #e67e22;
+        font-size: 3em; }
+    .offers_section .offers .single_meal_price {
+      border-bottom: 0.01em solid #e67e22;
+      padding-bottom: 20px; }
+    .offers_section .offers .detail_container {
+      flex-grow: 1;
+      margin: 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch; }
+      .offers_section .offers .detail_container p {
+        margin-left: 10px; }
+      .offers_section .offers .detail_container .detail {
+        display: flex;
+        margin: 5px 0; }
+        .offers_section .offers .detail_container .detail .icon {
+          width: 24px;
+          height: 24px;
+          fill: #e67e22; }
+    @media (min-width: 680px) {
+      .offers_section .offers .card {
+        flex: 0 0 47%; } }
+    @media (min-width: 1000px) {
+      .offers_section .offers .card {
+        flex: 0 0 32%; }
+      .offers_section .offers {
+        max-width: 1000px;
+        margin: 0 auto; } }
+
+.contact_form_section .form {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px; }
+  .contact_form_section .form .form_single_item {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0; }
+    .contact_form_section .form .form_single_item input, .contact_form_section .form .form_single_item select, .contact_form_section .form .form_single_item textarea, .contact_form_section .form .form_single_item .checkbox {
+      flex-grow: 2;
+      padding: 8px; }
+    .contact_form_section .form .form_single_item label {
+      width: 250px;
+      margin-bottom: 8px; }
+  .contact_form_section .form .checkbox {
+    display: flex;
+    align-items: center; }
+  .contact_form_section .form .checkbox input[type='checkbox'] {
+    display: block;
+    flex-grow: 0;
+    width: 24px;
+    height: 15px;
+    margin-right: 5px;
+    margin-left: -5px;
+    align-self: flex-end; }
+  .contact_form_section .form .checkbox span {
+    flex-grow: 1; }
+  .contact_form_section .form .btn {
+    margin-top: 24px;
+    align-self: flex-end; }
+  @media (min-width: 575px) {
+    .contact_form_section .form .form_single_item {
+      flex-direction: row; } }
+  @media (min-width: 700px) {
+    .contact_form_section .form {
+      width: 650px;
+      margin: 0 auto; } }
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 24px; }
+  footer li {
+    list-style: none; }
+  footer nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px; }
+    footer nav .links {
+      display: flex;
+      margin: 0;
+      padding: 0; }
+      footer nav .links a {
+        padding-right: 16px;
+        text-decoration: none; }
+    footer nav .social_icons {
+      display: flex; }
+      footer nav .social_icons img {
+        width: 24px;
+        height: 24px; }
+      footer nav .social_icons li {
+        padding-left: 16px; }
+        footer nav .social_icons li:hover {
+          cursor: pointer; }
+  footer a, footer p {
+    color: #fff;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: color 0.3s ease-in; }
+  footer a:hover {
+    opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */
