@@ -3,6 +3,16 @@ $primary-dark:  darken($primary-color,5%);
 $dark-font-color: #555;
 $light-font-color: #fff;
 
+//g stands for gutter
+$g-xxsmall : 8px;
+$g-xsmall : 16px;
+$g-small : 24px;
+$g-medium : 48px;
+$g-large: 72px;
+$g-xlarge: 96px;
+
+
+
 
 *{
   margin: 0;
@@ -16,12 +26,12 @@ $light-font-color: #fff;
 %sub_heading{
   word-spacing: 0.1em;
   font-size: 2em;
-  margin: 24px;
   text-align: center;
+  padding: $g-medium 0;
   &:after{
     display: block;
     width: 20%;
-    margin: 24px auto;
+    margin: $g-small auto;
     content: " ";
     height: 2px;
     background: $primary-color;
@@ -36,7 +46,6 @@ $light-font-color: #fff;
   font-weight: 400;
   font-size: 1.1em;
   border-radius: 200px;
-  margin-right: 10px;
   transition: 0.2s ease-in;
   text-align: center;
 
@@ -73,33 +82,32 @@ $light-font-color: #fff;
   .main_nav{
     position: absolute;
     top: 0;
-    width: calc(100vw - 5em);
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 48px;
     .main_logo{
       width: 100px;
       height: 100px;
-      margin: 24px;
+      margin: $g-small;
     }
     ul{
       list-style: none;
       display: flex;
+
+      // align-items: center;
+      // justify-content: center;
+
       a{
         color: $light-font-color;
-        padding: 8px 0;
         text-decoration: none;
         text-transform: uppercase;
         word-spacing: 3px;
-        margin: 20px;
-
+        margin: $g-small;
         &::after{
           display: block;
           content: "";
-          margin: 0 auto;
-          margin-top: 10px;
+          margin: $g-xsmall auto;
           width: 0%;
           height: 3px;
           background: $primary-color;
@@ -116,12 +124,12 @@ $light-font-color: #fff;
   }
 
   .main_heading{
-    margin: 48px 24px;
+    margin: 0 $g-small;
     h1{
       font-size: 2.5em;
       font-weight: 300;
       color: $light-font-color;
-      margin: 28px 0;
+      margin: $g-medium 0;
       word-spacing: 0.2em;
     }
   }
@@ -131,7 +139,6 @@ $light-font-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100vw - 1em);
   background: white;
   text-align: center;
   > h2{
@@ -141,14 +148,14 @@ $light-font-color: #fff;
     max-width: 800px;
     text-align: justify;
     font-size: 1.3em;
-    margin: 24px;
+    margin-bottom: $g-medium;
   }
   .cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 1%;
-    margin: 48px 0 ;
+    padding: 0 $g-small;
+    margin-bottom: $g-medium;
   }
   .card{
     flex: 0 0 24%;
@@ -157,11 +164,7 @@ $light-font-color: #fff;
     transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
     padding: 20px;
     box-sizing: border-box;
-    img{
-      width: 60px;
-      height: 60px;
-      font-size: 350%;
-    }
+
     > h3{
       text-align: center;
       font-size: 1.1em;
@@ -175,8 +178,8 @@ $light-font-color: #fff;
     }
     .icon{
       fill: $primary-color;
-      width: 72px;
-      height: 72px;
+      width: 48px;
+      height: 48px;
     }
     &:hover {
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -211,12 +214,11 @@ $light-font-color: #fff;
 }
 .how_it_works_container{
   background: #f6f6f6;
-  padding-top: 48px;
-  padding-bottom: 96px;
   > h2{
     @extend %sub_heading;
   }
   .how_it_works{
+    padding-bottom: $g-medium;
     display: flex;
     .app_mobile_view_container{
       display: flex;
@@ -230,8 +232,7 @@ $light-font-color: #fff;
         flex-basis: 0px;
         align-self: flex-end;
         justify-content: flex-end;
-        margin: 0 48px;
-        animation: slideUp 3s ease-in;
+        // animation: slideUp 3s ease-in;
 
       }
     }
@@ -280,8 +281,6 @@ $light-font-color: #fff;
   }
 }
 .our_cites_section{
-  padding-top: 48px;
-  padding-bottom: 94px;
   > h2{
     @extend %sub_heading;
   }
@@ -289,28 +288,29 @@ $light-font-color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1%;
-    margin: 48px 0 ;
+    padding: 0 $g-small;
+    margin-bottom: $g-medium;
+
   }
   .card{
     flex: 0 0 24%;
     background: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
-    padding: 5px;
     box-sizing: border-box;
 
     img{
       width: 100%;
       font-size: 350%;
+      margin: 2px;
     }
 
     h3{
-      text-align: left;
+
       font-size: 1.1em;
       font-weight: 400;
       text-transform: uppercase;
-      margin-top: 10px;
+      text-align: center;
     }
 
     &:hover {
@@ -318,13 +318,8 @@ $light-font-color: #fff;
     }
   }
   .detail_container{
-    margin-top: 10px;
-    margin-bottom: 30px;
-    img{
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-    }
+    margin: $g-xsmall $g-xsmall;
+
     .detail{
       margin: 5px 0;
       display: flex;
@@ -340,13 +335,12 @@ $light-font-color: #fff;
         fill: $primary-color;
         width: 24px;
         height: 24px;
+        padding-right: $g-xxsmall;
       }
     }
   }
 }
 .customer_reviews{
-  padding-top: 48px;
-  padding-bottom: 94px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('../../images/back_customers.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -360,9 +354,11 @@ $light-font-color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: $g-medium;
+
   }
   .review{
-    padding: 24px;
+    padding: 0 $g-small;
     text-align: justify;
     flex: 0 0 300px;
     font-style: italic;
@@ -373,7 +369,7 @@ $light-font-color: #fff;
     p::before{
       content: ",,";
       display: block;
-      font-size: 4em;
+      font-size: 2em;
       line-height: 1.1;
       font-style: italic;
     }
@@ -383,7 +379,7 @@ $light-font-color: #fff;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin-top: 20px;
+      margin-top: $g-small;
 
       .user_img{
         width: 54px;
@@ -395,12 +391,12 @@ $light-font-color: #fff;
   }
 }
 .offers_section{
-  padding-top: 48px;
-  padding-bottom: 94px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('../images/back_customers.jpg');
   background-size: cover;
   background-attachment: fixed;
   background: #f6f6f6;
+  padding-bottom: $g-medium;
+
 
   > h2{
     @extend %sub_heading;
@@ -408,15 +404,15 @@ $light-font-color: #fff;
   .offers{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:  center;
 
     .card{
       background: white;
       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
       transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
       padding: 20px;
+      margin: 0 $g-xsmall;
       box-sizing: border-box;
-      margin: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -470,29 +466,25 @@ $light-font-color: #fff;
   }
 }
 .contact_form_section{
-  padding-top: 72px;
 
   > h2{
     @extend %sub_heading;
   }
   .form{
     width: 50%;
-    margin: 50px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: $g-medium;
 
-    .button{
-      margin: 20px 0;
-    }
 
     .form_single_item{
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      padding: 5px 0;
+      padding: $g-xxsmall 0;
       input, select, textarea, .checkbox{
         flex-grow: 2;
-        padding: 5px;
+        padding: $g-xxsmall;
       }
       label{
         width: 250px;
@@ -516,55 +508,70 @@ $light-font-color: #fff;
     .checkbox span{
       flex-grow: 1;
     }
+    .btn{
+      margin-top: $g-small;
+      width: 30%;
+      align-self: flex-end;
+    }
 
   }
 }
+
 footer{
   background: #222;
   color: $light-font-color;
   text-align: center;
-  padding: 48px 0;
-
+  padding-bottom: $g-small;
   li{
     list-style: none;
   }
   nav{
-    width: 80%;
-    margin: 48px auto;
     display: flex;
     justify-content: space-between;
-  }
-  .menu{
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
-  }
-  li{
-    padding: 10px;
-    &:hover{
-      cursor: pointer;
+    padding: $g-small;
+    .links{
+      display: flex;
+      margin: 0;
+      padding: 0;
+      a{
+        padding-right: $g-xsmall;
+        text-decoration: none;
+      }
+    }
+    .social_icons{
+      display: flex;
+      img{
+        width: 24px;
+        height: 24px;
+      }
+      li{
+        padding-left: $g-xsmall;
+        &:hover{
+            cursor: pointer;
+        }
+      }
     }
   }
-  .social_icons{
-    flex-grow: 0;
-    img{
-      width: 34px;
-      height: 34px;
-      padding: 10px;
-    }
-  }
+
   a, p{
     color: $light-font-color;
     opacity: 0.6;
     text-decoration: none;
     transition: color 0.3s ease-in;
   }
+
   a:hover{
     opacity: 1;
   }
+
+
+
 }
 
 
+
+
+//Animations
 
 @keyframes slideUp{
   0% {
