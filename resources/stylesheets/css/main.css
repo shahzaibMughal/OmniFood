@@ -5,18 +5,21 @@
   color: #555;
   font-size: 20px; }
 
-.food_delivery > h2, .how_it_works_container > h2, .our_cites_section > h2, .customer_reviews > h2, .offers_section > h2, .contact_form_section > h2 {
+.food_delivery > h2, .how_it_works_container > h2 {
   word-spacing: 0.1em;
   font-size: 2em;
   text-align: center;
   padding: 48px 0; }
-  .food_delivery > h2:after, .how_it_works_container > h2:after, .our_cites_section > h2:after, .customer_reviews > h2:after, .offers_section > h2:after, .contact_form_section > h2:after {
+  .food_delivery > h2:after, .how_it_works_container > h2:after {
     display: block;
     width: 20%;
     margin: 24px auto;
     content: " ";
     height: 2px;
     background: #e67e22; }
+  @media (max-width: 500px) {
+    .food_delivery > h2, .how_it_works_container > h2 {
+      font-size: 1.2em; } }
 
 .btn {
   padding: 0.6em 2.5em;
@@ -27,7 +30,8 @@
   font-size: 1.1em;
   border-radius: 200px;
   transition: 0.2s ease-in;
-  text-align: center; }
+  text-align: center;
+  margin: 8px; }
   .btn:hover {
     background-color: #e67e22;
     cursor: pointer;
@@ -88,6 +92,19 @@
       color: #fff;
       margin: 48px 0;
       word-spacing: 0.2em; }
+  @media (max-width: 600px) {
+    .main_header .main_heading {
+      margin: 0 24px; }
+      .main_header .main_heading h1 {
+        font-size: 2em;
+        font-weight: 300;
+        color: #fff;
+        margin: 48px 0;
+        word-spacing: 0.2em; }
+    .main_header .main_button {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch; } }
 
 .food_delivery {
   display: flex;
@@ -103,11 +120,12 @@
   .food_delivery .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 24px;
-    margin-bottom: 48px; }
+    padding-bottom: 48px; }
   .food_delivery .card {
-    flex: 0 0 24%;
+    flex: 0 0 100%;
+    margin-top: 24px;
     background: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -134,7 +152,7 @@
     justify-content: center; }
     .food_delivery .food_images .image_wrapper {
       box-sizing: border-box;
-      flex: 1 0 25%;
+      flex: 1 0 100%;
       overflow: hidden;
       background: #111; }
       .food_delivery .food_images .image_wrapper img {
@@ -148,6 +166,32 @@
         .food_delivery .food_images .image_wrapper img:hover {
           transform: scale(1);
           opacity: 1; }
+      @media (min-width: 680px) and (max-width: 850px) {
+        .food_delivery .food_images .image_wrapper {
+          flex: 1 0 50%; } }
+      @media (min-width: 851px) {
+        .food_delivery .food_images .image_wrapper {
+          flex: 1 0 25%; } }
+  @media (max-width: 500px) {
+    .food_delivery p {
+      font-size: 1em;
+      margin: 0 24px; } }
+  @media (min-width: 680px) {
+    .food_delivery .card {
+      flex: 0 0 47%; } }
+  @media (min-width: 501px) and (max-width: 820px) {
+    .food_delivery p {
+      margin: 0 24px 48px 24px; } }
+  @media (min-width: 1200px) {
+    .food_delivery .cards {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 48px; }
+    .food_delivery .card {
+      flex: 0 0 24%; } }
+  @media (min-width: 1500px) {
+    .food_delivery .cards {
+      margin: 0 auto; } }
 
 .how_it_works_container {
   background: #f6f6f6; }
@@ -163,12 +207,10 @@
       .how_it_works_container .how_it_works .app_mobile_view_container img {
         flex-shrink: 0;
         width: 300px;
-        flex-basis: 0px;
         align-self: flex-end;
         justify-content: flex-end; }
   .how_it_works_container .works_steps {
-    flex: 2 0 0;
-    padding: 48px; }
+    flex: 2 0 0; }
     .how_it_works_container .works_steps p {
       font-size: 1.2em; }
     .how_it_works_container .works_steps .step_container {
@@ -177,225 +219,64 @@
       align-items: center;
       justify-content: flex-start; }
       .how_it_works_container .works_steps .step_container p {
-        flex: 1 0 0;
-        text-align: justify; }
+        text-align: left;
+        flex: 1 1 auto; }
       .how_it_works_container .works_steps .step_container .step {
-        display: inline-block;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #e67e22;
-        font-size: 1.5em;
+        font-size: 2em;
         border: 2px solid #e67e22;
         width: 56px;
         height: 56px;
+        flex: 0 0 auto;
         border-radius: 50%;
         margin: 10px 24px;
-        padding: 20px 10px 5px 10px; }
+        padding: 15px; }
     .how_it_works_container .works_steps .download_app_link_container {
       display: flex;
-      margin-top: 48px;
-      margin-left: 24px; }
+      margin-top: 24px; }
       .how_it_works_container .works_steps .download_app_link_container img {
         width: 200px;
         height: 70px;
-        margin: 10px; }
-
-.our_cites_section .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 24px;
-  margin-bottom: 48px; }
-.our_cites_section .card {
-  flex: 0 0 24%;
-  background: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-sizing: border-box; }
-  .our_cites_section .card img {
-    width: 100%;
-    font-size: 350%;
-    margin: 2px; }
-  .our_cites_section .card h3 {
-    font-size: 1.1em;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center; }
-  .our_cites_section .card:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-.our_cites_section .detail_container {
-  margin: 16px 16px; }
-  .our_cites_section .detail_container .detail {
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; }
-    .our_cites_section .detail_container .detail a {
-      color: #e67e22;
-      text-decoration: none; }
-    .our_cites_section .detail_container .detail .icon {
-      fill: #e67e22;
-      width: 24px;
-      height: 24px;
-      padding-right: 8px; }
-
-.customer_reviews {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../images/back_customers.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  color: #fff; }
-  .customer_reviews > h2 {
-    color: #fff; }
-  .customer_reviews .reviews_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 48px; }
-  .customer_reviews .review {
-    padding: 0 24px;
-    text-align: justify;
-    flex: 0 0 300px;
-    font-style: italic; }
-    .customer_reviews .review p, .customer_reviews .review span {
-      color: #fff; }
-    .customer_reviews .review p::before {
-      content: ",,";
-      display: block;
-      font-size: 2em;
-      line-height: 1.1;
-      font-style: italic; }
-    .customer_reviews .review .user {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-top: 24px; }
-      .customer_reviews .review .user .user_img {
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        margin-right: 10px; }
-
-.offers_section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/back_customers.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background: #f6f6f6;
-  padding-bottom: 48px; }
-  .offers_section .offers {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .offers_section .offers .card {
-      background: white;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      padding: 20px;
-      margin: 0 16px;
-      box-sizing: border-box;
-      display: flex;
+        margin-top: 10px; }
+        @media (min-width: 600px) {
+          .how_it_works_container .works_steps .download_app_link_container img {
+            margin-left: 24px; } }
+  @media (max-width: 875px) {
+    .how_it_works_container .how_it_works {
       flex-direction: column;
-      justify-content: space-between; }
-      .offers_section .offers .card h3 {
-        text-align: left;
-        font-size: 1.1em;
-        font-weight: 400; }
-      .offers_section .offers .card:hover {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-    .offers_section .offers .price {
-      color: #e67e22; }
-      .offers_section .offers .price span {
-        color: #e67e22;
-        font-size: 3em; }
-    .offers_section .offers .single_meal_price {
-      border-bottom: 0.01em solid #e67e22;
-      padding-bottom: 20px; }
-    .offers_section .offers .detail_container {
-      flex-grow: 1;
-      margin: 24px 0;
+      align-items: center; }
+    .how_it_works_container .download_app_link_container {
+      justify-content: center; } }
+  @media (max-width: 600px) {
+    .how_it_works_container .app_mobile_view_container img {
+      display: none; }
+    .how_it_works_container .works_steps {
+      margin-top: -50px; }
+    .how_it_works_container .works_steps .step_container {
       display: flex;
-      flex-direction: column;
-      align-items: stretch; }
-      .offers_section .offers .detail_container p {
-        margin-left: 10px; }
-      .offers_section .offers .detail_container .detail {
-        display: flex;
-        margin: 5px 0; }
-        .offers_section .offers .detail_container .detail .icon {
-          width: 24px;
-          height: 24px;
-          fill: #e67e22; }
-
-.contact_form_section .form {
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 48px; }
-  .contact_form_section .form .form_single_item {
-    display: flex;
-    flex-direction: row;
-    padding: 8px 0; }
-    .contact_form_section .form .form_single_item input, .contact_form_section .form .form_single_item select, .contact_form_section .form .form_single_item textarea, .contact_form_section .form .form_single_item .checkbox {
-      flex-grow: 2;
-      padding: 8px; }
-    .contact_form_section .form .form_single_item label {
-      width: 250px; }
-  .contact_form_section .form .checkbox {
-    display: flex;
-    align-items: center; }
-  .contact_form_section .form .checkbox input[type='checkbox'] {
-    display: block;
-    flex-grow: 0;
-    width: 24px;
-    height: 15px;
-    margin-right: 5px;
-    margin-left: -5px;
-    align-self: flex-end; }
-  .contact_form_section .form .checkbox span {
-    flex-grow: 1; }
-  .contact_form_section .form .btn {
-    margin-top: 24px;
-    width: 30%;
-    align-self: flex-end; }
-
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding-bottom: 24px; }
-  footer li {
-    list-style: none; }
-  footer nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 24px; }
-    footer nav .links {
-      display: flex;
-      margin: 0;
-      padding: 0; }
-      footer nav .links a {
-        padding-right: 16px;
-        text-decoration: none; }
-    footer nav .social_icons {
-      display: flex; }
-      footer nav .social_icons img {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .how_it_works_container .works_steps .step_container .step {
         width: 24px;
-        height: 24px; }
-      footer nav .social_icons li {
-        padding-left: 16px; }
-        footer nav .social_icons li:hover {
-          cursor: pointer; }
-  footer a, footer p {
-    color: #fff;
-    opacity: 0.6;
-    text-decoration: none;
-    transition: color 0.3s ease-in; }
-  footer a:hover {
-    opacity: 1; }
-
-@keyframes slideUp {
-  0% {
-    transform: translate(0px, 100%); }
-  100% {
-    transform: translate(0px, 0px); } }
+        height: 24px;
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; }
+      .how_it_works_container .works_steps .step_container p {
+        flex: 1 1 auto;
+        font-size: 1em;
+        text-align: left; }
+    .how_it_works_container .download_app_link_container {
+      flex-direction: column;
+      align-items: center; } }
+  @media (min-width: 601px) {
+    .how_it_works_container .works_steps {
+      padding: 48px; } }
 
 /*# sourceMappingURL=main.css.map */
